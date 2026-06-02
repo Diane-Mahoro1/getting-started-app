@@ -1,4 +1,6 @@
 # 🚀 Containerized Todo Application 
+![CI/CD Build Status](https://github.com)
+
 
 This project demonstrates the containerization, optimization, and local deployment of a Node.js web application. It serves as a foundational piece of my DevOps engineering journey, showcasing clean infrastructure-as-code practices and modern container workflows.
 
@@ -64,6 +66,13 @@ Make sure you have the following installed on your machine:
 * **Stop the application:** `docker stop <container-id>`
 
 ---
+
+### 3. Automated CI/CD Pipeline (GitHub Actions)
+* **Continuous Integration:** Configured a custom GitHub Actions workflow (`docker-ci.yml`) that triggers automatically on every code push to the `main` branch.
+* **Secure Secret Management:** Integrated encrypted GitHub Repository Secrets (`DOCKERHUB_USERNAME` and `DOCKERHUB_TOKEN`) to completely eliminate hardcoded cloud credentials.
+* **Automated Image Build & Push:** Orchestrated an automated build process utilizing Docker Buildx, tagging each production image with both `latest` and a unique Git commit SHA (`github.sha`) for flawless version tracking and rollback stability.
+* **Image Registry Distribution:** Successfully pipelines and deploys newly verified container images directly to my public [Docker Hub Registry](https://docker.com).
+
 
 ## 🔮 Next Steps on the DevOps Roadmap
 To mature this repository into an enterprise-grade showcase, I plan to:
