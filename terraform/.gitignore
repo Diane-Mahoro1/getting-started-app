@@ -1,0 +1,12 @@
+# Ignore local terraform directories
+.terraform/
+.terraform.lock.hcl
+
+# Ignore state files (They contain secret data!)
+*.tfstate
+*.tfstate.backup
+
+# Ignore variables that might contain secrets
+*.tfvars
+*.tfvars.json
+Use code with caution.
